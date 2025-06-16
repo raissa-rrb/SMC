@@ -1,0 +1,2 @@
+# SMC
+many-core systems 
