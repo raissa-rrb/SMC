@@ -1,0 +1,130 @@
+
+Info: (I804) /IEEE_Std_1666/deprecated: sc_start(double) deprecated, use sc_start(sc_time) or sc_start()
+************************ iteration 1
+  cycle = 215
+  opa   = 1965102536
+  opb   = 1639725855
+  pgcd  = 1
+************************ iteration 2
+  cycle = 339
+  opa   = 706684578
+  opb   = 1926601937
+  pgcd  = 1
+************************ iteration 3
+  cycle = 479
+  opa   = 71238646
+  opb   = 1147998030
+  pgcd  = 2
+************************ iteration 4
+  cycle = 597
+  opa   = 1038816544
+  opb   = 940714160
+  pgcd  = 16
+************************ iteration 5
+  cycle = 829
+  opa   = 789063065
+  opb   = 464968134
+  pgcd  = 1
+************************ iteration 6
+  cycle = 1077
+  opa   = 887950355
+  opb   = 46124838
+  pgcd  = 1
+************************ iteration 7
+  cycle = 1219
+  opa   = 576618719
+  opb   = 1428715137
+  pgcd  = 1
+************************ iteration 8
+  cycle = 1519
+  opa   = 747317929
+  opb   = 80357754
+  pgcd  = 1
+************************ iteration 9
+  cycle = 1721
+  opa   = 1344159057
+  opb   = 636297752
+  pgcd  = 1
+************************ iteration 10
+  cycle = 1969
+  opa   = 1332307227
+  opb   = 90589962
+  pgcd  = 3
+************************ iteration 11
+  cycle = 2339
+  opa   = 1731248480
+  opb   = 1148562729
+  pgcd  = 1
+************************ iteration 12
+  cycle = 2553
+  opa   = 1944426409
+  opb   = 278880157
+  pgcd  = 1
+************************ iteration 13
+  cycle = 2695
+  opa   = 1730141091
+  opb   = 1050303144
+  pgcd  = 3
+************************ iteration 14
+  cycle = 3985
+  opa   = 1496116049
+  opb   = 1851439417
+  pgcd  = 1
+************************ iteration 15
+  cycle = 4131
+  opa   = 322615642
+  opb   = 1466708419
+  pgcd  = 1
+************************ iteration 16
+  cycle = 4321
+  opa   = 2094128415
+  opb   = 140234531
+  pgcd  = 1
+************************ iteration 17
+  cycle = 4833
+  opa   = 958950626
+  opb   = 653329346
+  pgcd  = 2
+************************ iteration 18
+  cycle = 5249
+  opa   = 2066836468
+  opb   = 1030189272
+  pgcd  = 4
+************************ iteration 19
+  cycle = 5461
+  opa   = 1801327376
+  opb   = 958169364
+  pgcd  = 4
+************************ iteration 20
+  cycle = 5795
+  opa   = 1970903432
+  opb   = 442906793
+  pgcd  = 1
+************************ iteration 21
+  cycle = 9459
+  opa   = 1423137499
+  opb   = 711370139
+  pgcd  = 1
+************************ iteration 22
+  cycle = 9605
+  opa   = 489031631
+  opb   = 1999756218
+  pgcd  = 1
+************************ iteration 23
+  cycle = 9755
+  opa   = 2140085276
+  opb   = 1236349560
+  pgcd  = 4
+************************ iteration 24
+  cycle = 9919
+  opa   = 2080113972
+  opb   = 1336760686
+  pgcd  = 2
+
+Info: (I804) /IEEE_Std_1666/deprecated: You can turn off warnings about
+             IEEE 1666 deprecated features by placing this method call as the
+             first statement in your sc_main() function:
+
+  sc_report_handler::set_actions("/IEEE_Std_1666/deprecated", SC_DO_NOTHING);
+
+

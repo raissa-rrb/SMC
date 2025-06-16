@@ -1,0 +1,371 @@
+
+********************************************************
+
+******        tp6_soclib                          ******
+
+********************************************************
+
+    ncycles      = 1000000000
+    sys_pathname = soft/sys.bin
+    app_pathname = soft/app.bin
+    ioc_pathname = images.raw
+    icache_sets  = 128
+    icache_words = 8
+    icache_ways  = 4
+    dcache_sets  = 128
+    dcache_words = 8
+    dcache_ways  = 4
+    noc_latency  = 20
+    wbuf_nlines  = 2
+    wbuf_nwords  = 2
+
+Mapping table: ad:(8) id:(2) cacheability mask: 0xff000000
+ <Segment "seg_reset": base = 0xbfc00000 / size = 0x1000 / tgtid = (0) / cached>
+ <Segment "seg_kernel": base = 0x80000000 / size = 0x4000 / tgtid = (0x1) / cached>
+ <Segment "seg_kdata": base = 0x81000000 / size = 0x4000 / tgtid = (0x1) / cached>
+ <Segment "seg_kunc": base = 0x82000000 / size = 0x1000 / tgtid = (0x1) / uncached>
+ <Segment "seg_code": base = 0x400000 / size = 0x4000 / tgtid = (0x1) / cached>
+ <Segment "seg_data": base = 0x1000000 / size = 0x4000 / tgtid = (0x1) / cached>
+ <Segment "seg_stack": base = 0x2000000 / size = 0x1000000 / tgtid = (0x1) / cached>
+ <Segment "seg_tty": base = 0x90000000 / size = 0x40 / tgtid = (0x2) / uncached>
+ <Segment "seg_timer": base = 0x91000000 / size = 0x40 / tgtid = (0x4) / uncached>
+ <Segment "seg_icu": base = 0x9f000000 / size = 0x14 / tgtid = (0x8) / uncached>
+ <Segment "seg_dma": base = 0x93000000 / size = 0x14 / tgtid = (0x6) / uncached>
+ <Segment "seg_fbf": base = 0x96000000 / size = 0x401000 / tgtid = (0x7) / uncached>
+ <Segment "seg_ioc": base = 0x92000000 / size = 0x20 / tgtid = (0x5) / uncached>
+ <Segment "seg_gcd": base = 0x95000000 / size = 0x14 / tgtid = (0x3) / uncached>
+
+  - Building VciSimpleRam : rom
+    => segment seg_reset / base = 0xbfc00000 / size = 0x1000
+  - Building VciSimpleRam : ram
+    => segment seg_kernel / base = 0x80000000 / size = 0x4000
+    => segment seg_kdata / base = 0x81000000 / size = 0x4000
+    => segment seg_kunc / base = 0x82000000 / size = 0x1000
+    => segment seg_code / base = 0x400000 / size = 0x4000
+    => segment seg_data / base = 0x1000000 / size = 0x4000
+    => segment seg_stack / base = 0x2000000 / size = 0x1000000
+  - Building VciMultiTTy tty
+    => segment seg_tty / base = 0x90000000 / size = 0x40
+  - Building VciFramebuffer : fbf
+    => width  = 128
+    => heigth = 128
+    => segment seg_fbf / base = 0x96000000 / size = 0x401000
+  - Building VciVgmn : noc
+    => targets        = 9
+    => initiators     = 3
+    => default target = 0
+Loading at 0xbfc00000 size 0x1000: seg_reset 
+Loading at 0x80000000 size 0x4000: seg_kcode .MIPS.abiflags 
+Loading at 0x81000000 size 0x4000: seg_kunc 
+Loading at 0x82000000 size 0x1000: seg_kdata 
+Loading at 0x400000 size 0x4000: seg_code .MIPS.abiflags 
+Loading at 0x1000000 size 0x4000: seg_data 
+Loading at 0x2000000 size 0x1000000: nothing
+------------------------------------
+CPU 0 / cycles = 0
+- CPI               = -nan
+- READ RATE         = -nan
+- WRITE RATE        = -nan
+- UNC RATE          = -nan
+- CACHED WRITE RATE = -nan
+- IMISS_RATE        = -nan
+- DMISS RATE        = -nan
+- IMISS COST        = -nan
+- DMISS COST        = -nan
+- DUNC COST         = -nan
+- WRITE COST        = -nan
+- WRITE LENGTH      = -nan
+------------------------------------
+CPU 0 / cycles = 1000000
+- CPI               = 2.51955
+- READ RATE         = 0.216588
+- WRITE RATE        = 0.0465714
+- UNC RATE          = 0.0148729
+- CACHED WRITE RATE = 0.997403
+- IMISS_RATE        = 0.000325022
+- DMISS RATE        = 0.00831753
+- IMISS COST        = 72.2248
+- DMISS COST        = 54.6923
+- DUNC COST         = 46.0747
+- WRITE COST        = 10.2014
+- WRITE LENGTH      = 1.00645
+------------------------------------
+CPU 0 / cycles = 2000000
+- CPI               = 2.85962
+- READ RATE         = 0.228031
+- WRITE RATE        = 0.058475
+- UNC RATE          = 0.0187262
+- CACHED WRITE RATE = 0.998557
+- IMISS_RATE        = 0.000184446
+- DMISS RATE        = 0.00993836
+- IMISS COST        = 72.2248
+- DMISS COST        = 54.4997
+- DUNC COST         = 46.0667
+- WRITE COST        = 10.3129
+- WRITE LENGTH      = 1.00513
+------------------------------------
+CPU 0 / cycles = 3000000
+- CPI               = 3.10843
+- READ RATE         = 0.23439
+- WRITE RATE        = 0.0666178
+- UNC RATE          = 0.0215342
+- CACHED WRITE RATE = 0.998833
+- IMISS_RATE        = 0.000133663
+- DMISS RATE        = 0.0111355
+- IMISS COST        = 72.2248
+- DMISS COST        = 54.4331
+- DUNC COST         = 46.0583
+- WRITE COST        = 10.4444
+- WRITE LENGTH      = 1.00462
+------------------------------------
+CPU 0 / cycles = 4000000
+- CPI               = 3.12981
+- READ RATE         = 0.235734
+- WRITE RATE        = 0.0675366
+- UNC RATE          = 0.0218015
+- CACHED WRITE RATE = 0.998923
+- IMISS_RATE        = 0.000100936
+- DMISS RATE        = 0.0111725
+- IMISS COST        = 72.2248
+- DMISS COST        = 54.4424
+- DUNC COST         = 46.0619
+- WRITE COST        = 10.423
+- WRITE LENGTH      = 1.00489
+------------------------------------
+CPU 0 / cycles = 5000000
+- CPI               = 3.43503
+- READ RATE         = 0.246202
+- WRITE RATE        = 0.0780308
+- UNC RATE          = 0.0252069
+- CACHED WRITE RATE = 0.999023
+- IMISS_RATE        = 8.86237e-05
+- DMISS RATE        = 0.0123699
+- IMISS COST        = 72.2248
+- DMISS COST        = 54.4218
+- DUNC COST         = 46.0606
+- WRITE COST        = 10.4382
+- WRITE LENGTH      = 1.00478
+------------------------------------
+CPU 0 / cycles = 6000000
+- CPI               = 3.33869
+- READ RATE         = 0.243205
+- WRITE RATE        = 0.0748295
+- UNC RATE          = 0.0241393
+- CACHED WRITE RATE = 0.999093
+- IMISS_RATE        = 7.17818e-05
+- DMISS RATE        = 0.0119867
+- IMISS COST        = 72.2248
+- DMISS COST        = 54.4169
+- DUNC COST         = 46.0604
+- WRITE COST        = 10.427
+- WRITE LENGTH      = 1.0047
+------------------------------------
+CPU 0 / cycles = 7000000
+- CPI               = 3.23785
+- READ RATE         = 0.239118
+- WRITE RATE        = 0.0712493
+- UNC RATE          = 0.0230294
+- CACHED WRITE RATE = 0.999104
+- IMISS_RATE        = 5.96689e-05
+- DMISS RATE        = 0.0116315
+- IMISS COST        = 72.2248
+- DMISS COST        = 54.4133
+- DUNC COST         = 46.0599
+- WRITE COST        = 10.449
+- WRITE LENGTH      = 1.00473
+------------------------------------
+CPU 0 / cycles = 8000000
+- CPI               = 3.23188
+- READ RATE         = 0.239192
+- WRITE RATE        = 0.0711148
+- UNC RATE          = 0.022971
+- CACHED WRITE RATE = 0.999114
+- IMISS_RATE        = 5.21141e-05
+- DMISS RATE        = 0.0115846
+- IMISS COST        = 72.2248
+- DMISS COST        = 54.4203
+- DUNC COST         = 46.0613
+- WRITE COST        = 10.4384
+- WRITE LENGTH      = 1.00482
+------------------------------------
+CPU 0 / cycles = 9000000
+- CPI               = 3.3293
+- READ RATE         = 0.24256
+- WRITE RATE        = 0.0744791
+- UNC RATE          = 0.0240527
+- CACHED WRITE RATE = 0.999171
+- IMISS_RATE        = 4.772e-05
+- DMISS RATE        = 0.0119703
+- IMISS COST        = 72.2248
+- DMISS COST        = 54.4054
+- DUNC COST         = 46.0597
+- WRITE COST        = 10.4425
+- WRITE LENGTH      = 1.00469
+------------------------------------
+CPU 0 / cycles = 10000000
+- CPI               = 3.30718
+- READ RATE         = 0.241323
+- WRITE RATE        = 0.0736188
+- UNC RATE          = 0.0238107
+- CACHED WRITE RATE = 0.999178
+- IMISS_RATE        = 4.26626e-05
+- DMISS RATE        = 0.0119146
+- IMISS COST        = 72.2248
+- DMISS COST        = 54.4002
+- DUNC COST         = 46.0589
+- WRITE COST        = 10.4626
+- WRITE LENGTH      = 1.00459
+------------------------------------
+CPU 0 / cycles = 11000000
+- CPI               = 3.31425
+- READ RATE         = 0.24176
+- WRITE RATE        = 0.0739032
+- UNC RATE          = 0.0238933
+- CACHED WRITE RATE = 0.999181
+- IMISS_RATE        = 3.88671e-05
+- DMISS RATE        = 0.0119242
+- IMISS COST        = 72.2248
+- DMISS COST        = 54.405
+- DUNC COST         = 46.0596
+- WRITE COST        = 10.457
+- WRITE LENGTH      = 1.00459
+------------------------------------
+CPU 0 / cycles = 12000000
+- CPI               = 3.30133
+- READ RATE         = 0.233943
+- WRITE RATE        = 0.0736082
+- UNC RATE          = 0.0238304
+- CACHED WRITE RATE = 0.9992
+- IMISS_RATE        = 3.9616e-05
+- DMISS RATE        = 0.0122972
+- IMISS COST        = 72.5694
+- DMISS COST        = 54.4029
+- DUNC COST         = 46.0588
+- WRITE COST        = 10.4727
+- WRITE LENGTH      = 1.00447
+------------------------------------
+CPU 0 / cycles = 13000000
+- CPI               = 2.80481
+- READ RATE         = 0.183468
+- WRITE RATE        = 0.0577269
+- UNC RATE          = 0.0186889
+- CACHED WRITE RATE = 0.9992
+- IMISS_RATE        = 3.10687e-05
+- DMISS RATE        = 0.0122972
+- IMISS COST        = 72.5694
+- DMISS COST        = 54.4029
+- DUNC COST         = 46.0588
+- WRITE COST        = 10.4727
+- WRITE LENGTH      = 1.00447
+------------------------------------
+CPU 0 / cycles = 14000000
+- CPI               = 2.48452
+- READ RATE         = 0.150909
+- WRITE RATE        = 0.0474823
+- UNC RATE          = 0.0153722
+- CACHED WRITE RATE = 0.9992
+- IMISS_RATE        = 2.5555e-05
+- DMISS RATE        = 0.0122972
+- IMISS COST        = 72.5694
+- DMISS COST        = 54.4029
+- DUNC COST         = 46.0588
+- WRITE COST        = 10.4727
+- WRITE LENGTH      = 1.00447
+------------------------------------
+CPU 0 / cycles = 15000000
+- CPI               = 2.26077
+- READ RATE         = 0.128164
+- WRITE RATE        = 0.0403259
+- UNC RATE          = 0.0130554
+- CACHED WRITE RATE = 0.9992
+- IMISS_RATE        = 2.17034e-05
+- DMISS RATE        = 0.0122972
+- IMISS COST        = 72.5694
+- DMISS COST        = 54.4029
+- DUNC COST         = 46.0588
+- WRITE COST        = 10.4727
+- WRITE LENGTH      = 1.00447
+------------------------------------
+CPU 0 / cycles = 16000000
+- CPI               = 2.09564
+- READ RATE         = 0.111378
+- WRITE RATE        = 0.0350441
+- UNC RATE          = 0.0113454
+- CACHED WRITE RATE = 0.9992
+- IMISS_RATE        = 1.88608e-05
+- DMISS RATE        = 0.0122972
+- IMISS COST        = 72.5694
+- DMISS COST        = 54.4029
+- DUNC COST         = 46.0588
+- WRITE COST        = 10.4727
+- WRITE LENGTH      = 1.00447
+------------------------------------
+CPU 0 / cycles = 17000000
+- CPI               = 1.96876
+- READ RATE         = 0.0984791
+- WRITE RATE        = 0.0309857
+- UNC RATE          = 0.0100315
+- CACHED WRITE RATE = 0.9992
+- IMISS_RATE        = 1.66765e-05
+- DMISS RATE        = 0.0122972
+- IMISS COST        = 72.5694
+- DMISS COST        = 54.4029
+- DUNC COST         = 46.0588
+- WRITE COST        = 10.4727
+- WRITE LENGTH      = 1.00447
+------------------------------------
+CPU 0 / cycles = 18000000
+- CPI               = 1.86821
+- READ RATE         = 0.088258
+- WRITE RATE        = 0.0277697
+- UNC RATE          = 0.00899034
+- CACHED WRITE RATE = 0.9992
+- IMISS_RATE        = 1.49457e-05
+- DMISS RATE        = 0.0122972
+- IMISS COST        = 72.5694
+- DMISS COST        = 54.4029
+- DUNC COST         = 46.0588
+- WRITE COST        = 10.4727
+- WRITE LENGTH      = 1.00447
+------------------------------------
+CPU 0 / cycles = 19000000
+- CPI               = 1.78657
+- READ RATE         = 0.0799591
+- WRITE RATE        = 0.0251585
+- UNC RATE          = 0.00814498
+- CACHED WRITE RATE = 0.9992
+- IMISS_RATE        = 1.35403e-05
+- DMISS RATE        = 0.0122972
+- IMISS COST        = 72.5694
+- DMISS COST        = 54.4029
+- DUNC COST         = 46.0588
+- WRITE COST        = 10.4727
+- WRITE LENGTH      = 1.00447
+------------------------------------
+CPU 0 / cycles = 20000000
+- CPI               = 1.71897
+- READ RATE         = 0.0730868
+- WRITE RATE        = 0.0229962
+- UNC RATE          = 0.00744493
+- CACHED WRITE RATE = 0.9992
+- IMISS_RATE        = 1.23766e-05
+- DMISS RATE        = 0.0122972
+- IMISS COST        = 72.5694
+- DMISS COST        = 54.4029
+- DUNC COST         = 46.0588
+- WRITE COST        = 10.4727
+- WRITE LENGTH      = 1.00447
+------------------------------------
+CPU 0 / cycles = 21000000
+- CPI               = 1.66206
+- READ RATE         = 0.0673023
+- WRITE RATE        = 0.0211761
+- UNC RATE          = 0.0068557
+- CACHED WRITE RATE = 0.9992
+- IMISS_RATE        = 1.1397e-05
+- DMISS RATE        = 0.0122972
+- IMISS COST        = 72.5694
+- DMISS COST        = 54.4029
+- DUNC COST         = 46.0588
+- WRITE COST        = 10.4727
+- WRITE LENGTH      = 1.00447
